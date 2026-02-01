@@ -1,1 +1,9 @@
 __pycache__
+
+# Presentation
+presentation/node_modules/
+presentation/dist/
+presentation/dist-ssr/
+presentation/*.local
+presentation/.firebase/
+presentation/.DS_Store
