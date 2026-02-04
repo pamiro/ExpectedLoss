@@ -1,7 +1,6 @@
 # Setup
 
-This file sets out some conditions for the synthesis of the framework. The framework is in form of python package that be applied to organizational data. The parameters of the framework should be fit on organizational data. After parameters are fit, the framework should be able to generate the expected loss for the organization. The framework should be able to generate the expected loss for the organization under different scenarios. The framework should be able to generate the expected loss for the organization under different scenarios and different time horizons.
-
+This file sets out some conditions for the synthesis of the python framework. The framework is in form of python package that be applied to organizational data. The parameters of the framework should be fit on organizational data. After parameters are fit, the framework should be able to generate the expected loss for the organization. The framework should be able to generate the expected loss for the organization under different scenarios. The framework should be able to generate the expected loss for the organization under different scenarios and different time horizons.
 
 ## Overlay approach
 
