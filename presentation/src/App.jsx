@@ -65,7 +65,7 @@ const CodeBlock = ({ code }) => (
 function App() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const slideRefs = useRef([]);
-    const totalSlides = 11;
+    const totalSlides = 13;
 
     useEffect(() => {
         // Initialize refs array
@@ -144,8 +144,85 @@ function App() {
                 </div>
             </SlideContainer>
 
-            {/* Slide 4: Prompt - Data Model */}
+            {/* Slide: Agentic Creation */}
             <SlideContainer ref={el => slideRefs.current[3] = el}>
+                <h2 style={{ fontSize: '60px', fontFamily: theme.fonts.header, color: theme.colors.tertiary, marginBottom: '30px' }}>Agentic Creation of ECL Framework</h2>
+                <div style={{ maxWidth: '900px', textAlign: 'center' }}>
+                    <p style={{ fontSize: '32px', marginBottom: '40px' }}>
+                        The following prompts facilitated the construction of the Python framework found in this repository.
+                    </p>
+                    <a href="https://github.com/pamiro/ExpectedLoss" style={{ fontSize: '28px', color: theme.colors.tertiary, textDecoration: 'none', borderBottom: `2px solid ${theme.colors.tertiary}` }}>
+                        View Repository on GitHub
+                    </a>
+                </div>
+            </SlideContainer>
+
+            {/* Slide: The Agent */}
+            <SlideContainer ref={el => slideRefs.current[4] = el}>
+                <h2 style={{ fontSize: '60px', fontFamily: theme.fonts.header, color: theme.colors.tertiary, marginBottom: '30px' }}>The Agent: IFRS9 Model Developer</h2>
+                <div style={{ maxWidth: '1000px', textAlign: 'left' }}>
+                    <p style={{ fontSize: '28px', marginBottom: '30px' }}>
+                        A specialized workflow designed to autonomously execute the Model Development Lifecycle.
+                    </p>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
+                        <div style={{ padding: '20px', border: `1px solid ${theme.colors.quaternary}` }}>
+                            <h3 style={{ color: theme.colors.tertiary, margin: '0 0 15px 0' }}>Planning & Analysis</h3>
+                            <ul style={{ fontSize: '22px', lineHeight: '1.5' }}>
+                                <li><b>Regulatory Scan:</b> IFRS9, ECB Guidelines, EBA RTS.</li>
+                                <li><b>Data Assessment:</b> Quality checks, Segmentation.</li>
+                            </ul>
+                        </div>
+                        <div style={{ padding: '20px', border: `1px solid ${theme.colors.tertiary}` }}>
+                            <h3 style={{ color: theme.colors.tertiary, margin: '0 0 15px 0' }}>Execution</h3>
+                            <ul style={{ fontSize: '22px', lineHeight: '1.5' }}>
+                                <li><b>Modelling:</b> PIT/TTC PD, LGD, EAD.</li>
+                                <li><b>Calculation:</b> ECL Engine, Scenarios.</li>
+                                <li><b>Validation:</b> Backtesting, Reports.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style={{ marginTop: '30px', textAlign: 'center' }}>
+                        <a href="https://github.com/pamiro/ExpectedLoss/blob/main/.agent/workflows/ifrs9-model-development.md" style={{ fontSize: '24px', color: theme.colors.tertiary, textDecoration: 'none', borderBottom: `1px solid ${theme.colors.tertiary}` }}>
+                            View Agent Workflow: ifrs9-model-development.md
+                        </a>
+                    </div>
+                </div>
+            </SlideContainer>
+
+            {/* Slide: The Validator */}
+            <SlideContainer ref={el => slideRefs.current[5] = el}>
+                <h2 style={{ fontSize: '60px', fontFamily: theme.fonts.header, color: theme.colors.tertiary, marginBottom: '30px' }}>The Agent: IFRS9 Model Validator</h2>
+                <div style={{ maxWidth: '1000px', textAlign: 'left' }}>
+                    <p style={{ fontSize: '28px', marginBottom: '30px' }}>
+                        An independent adversarial agent designed to challenge the model and ensure compliance.
+                    </p>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
+                        <div style={{ padding: '20px', border: `1px solid ${theme.colors.quaternary}` }}>
+                            <h3 style={{ color: theme.colors.tertiary, margin: '0 0 15px 0' }}>Independent Review</h3>
+                            <ul style={{ fontSize: '22px', lineHeight: '1.5' }}>
+                                <li><b>Governance:</b> Challenge assumptions & methodology.</li>
+                                <li><b>Compliance:</b> Check against EBA Guidelines / ECB Guide.</li>
+                            </ul>
+                        </div>
+                        <div style={{ padding: '20px', border: `1px solid ${theme.colors.tertiary}` }}>
+                            <h3 style={{ color: theme.colors.tertiary, margin: '0 0 15px 0' }}>Key Checks</h3>
+                            <ul style={{ fontSize: '22px', lineHeight: '1.5' }}>
+                                <li><b>Backtesting:</b> Binomial tests, PSI.</li>
+                                <li><b>Sensitivity:</b> Stress testing scenarios.</li>
+                                <li><b>Benchmarking:</b> Compare against challenger models.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style={{ marginTop: '30px', textAlign: 'center' }}>
+                        <a href="https://github.com/pamiro/ExpectedLoss/blob/main/.agent/workflows/ifrs9-cecl-validation.md" style={{ fontSize: '24px', color: theme.colors.tertiary, textDecoration: 'none', borderBottom: `1px solid ${theme.colors.tertiary}` }}>
+                            View Agent Workflow: ifrs9-cecl-validation.md
+                        </a>
+                    </div>
+                </div>
+            </SlideContainer>
+
+            {/* Slide 4: Prompt - Data Model */}
+            <SlideContainer ref={el => slideRefs.current[6] = el}>
                 <h2 style={{ fontSize: '50px', fontFamily: theme.fonts.header, marginBottom: '30px' }}>Prompt 1: Data Model Generation</h2>
                 <p style={{ fontSize: '24px', marginBottom: '20px' }}>Objective: Generate realistic portfolio & macro data.</p>
                 <div style={{ width: '100%', maxWidth: '1000px' }}>
@@ -161,7 +238,7 @@ Include simulated data for macroeconomic history (GDP, Unemployment) and project
             </SlideContainer>
 
             {/* Slide 5: Prompt - PIT Estimators */}
-            <SlideContainer ref={el => slideRefs.current[4] = el}>
+            <SlideContainer ref={el => slideRefs.current[7] = el}>
                 <h2 style={{ fontSize: '50px', fontFamily: theme.fonts.header, marginBottom: '30px' }}>Prompt 2: PIT PD/LGD/EAD</h2>
                 <p style={{ fontSize: '24px', marginBottom: '20px' }}>Objective: Convert TTC parameters to Point-in-Time.</p>
                 <div style={{ width: '100%', maxWidth: '1000px' }}>
@@ -176,7 +253,7 @@ Implement a Vasicek Single Factor model to convert Through-the-Cycle (TTC) PDs t
             </SlideContainer>
 
             {/* Slide 6: Prompt - Transition Matrices */}
-            <SlideContainer ref={el => slideRefs.current[5] = el}>
+            <SlideContainer ref={el => slideRefs.current[8] = el}>
                 <h2 style={{ fontSize: '50px', fontFamily: theme.fonts.header, marginBottom: '30px' }}>Prompt 3: Transition Matrices</h2>
                 <p style={{ fontSize: '24px', marginBottom: '20px' }}>Objective: Markov Chain implementation for Lifetime PD.</p>
                 <div style={{ width: '100%', maxWidth: '1000px' }}>
@@ -191,7 +268,7 @@ Create transition_matrix.py.
             </SlideContainer>
 
             {/* Slide 7: Prompt - Responsible ECL */}
-            <SlideContainer ref={el => slideRefs.current[6] = el}>
+            <SlideContainer ref={el => slideRefs.current[9] = el}>
                 <h2 style={{ fontSize: '50px', fontFamily: theme.fonts.header, marginBottom: '30px' }}>Prompt 4: ECL Engine</h2>
                 <p style={{ fontSize: '24px', marginBottom: '20px' }}>Objective: The "Responsible" Calculation Engine.</p>
                 <div style={{ width: '100%', maxWidth: '1000px' }}>
@@ -206,7 +283,7 @@ Create ecl_engine.py.
             </SlideContainer>
 
             {/* Slide 9: Prompt - Report Generation */}
-            <SlideContainer ref={el => slideRefs.current[7] = el}>
+            <SlideContainer ref={el => slideRefs.current[10] = el}>
                 <h2 style={{ fontSize: '50px', fontFamily: theme.fonts.header, marginBottom: '30px' }}>Prompt 5: Reporting & Analysis</h2>
                 <p style={{ fontSize: '24px', marginBottom: '20px' }}>Objective: End-to-end execution and visualization.</p>
                 <div style={{ width: '100%', maxWidth: '1000px' }}>
@@ -222,7 +299,7 @@ Create run_analysis.py.
             </SlideContainer>
 
             {/* Slide 10: Philosophical Aspects */}
-            <SlideContainer ref={el => slideRefs.current[8] = el}>
+            <SlideContainer ref={el => slideRefs.current[11] = el}>
                 <h2 style={{ fontSize: '60px', fontFamily: theme.fonts.header, color: theme.colors.tertiary }}>Philosophical Aspects</h2>
                 <p style={{ fontSize: '32px', fontStyle: 'italic', marginBottom: '40px' }}>"Prediction is very difficult, especially if it's about the future."</p>
                 <div style={{ maxWidth: '800px', fontSize: '28px', textAlign: 'left' }}>
@@ -234,15 +311,15 @@ Create run_analysis.py.
             </SlideContainer>
 
             {/* Slide 11: Bio */}
-            <SlideContainer ref={el => slideRefs.current[9] = el}>
+            <SlideContainer ref={el => slideRefs.current[12] = el}>
                 <h2 style={{ fontSize: '60px', fontFamily: theme.fonts.header }}>About Me</h2>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '60px', marginTop: '40px' }}>
                     <div style={{ width: '300px', height: '300px', borderRadius: '50%', backgroundColor: '#333', display: 'flex', justifyContent: 'center', alignItems: 'center', border: `4px solid ${theme.colors.tertiary}` }}>
-                        <span style={{ color: '#666' }}>[Photo]</span>
+                        <img src="/profile.png" alt="Pavel Mironchyk" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
                     </div>
                     <div style={{ textAlign: 'left' }}>
-                        <h3 style={{ fontSize: '40px', color: theme.colors.tertiary, margin: '0 0 20px 0' }}>[Pavel Mironchyk]</h3>
-                        <p style={{ fontSize: '28px' }}>Sub-Area Lead in Retail Credit Risk in Rabobank</p>
+                        <h3 style={{ fontSize: '40px', color: theme.colors.tertiary, margin: '0 0 20px 0' }}>Pavel Mironchyk</h3>
+                        <p style={{ fontSize: '28px' }}>Rabobank</p>
                         <p style={{ fontSize: '24px', color: theme.colors.quaternary }}>Passionate about combining classical quantitative finance with modern AI agentic workflows.</p>
                     </div>
                 </div>
