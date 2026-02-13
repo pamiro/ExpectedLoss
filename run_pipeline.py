@@ -9,7 +9,7 @@ def run_prompts(prompts_dir="prompts", model="gemini-3-pro", src_access=False):
     Executes all markdown prompts in the specified directory using the gemini CLI.
     """
     # 1. Gather all prompt files
-    prompt_files = sorted(glob.glob(os.path.join(prompts_dir, "*.md")))
+    prompt_files = sorted(glob.glob(os.path.join(prompts_dir, "[0-9][0-9]*.md")))
     
     if not prompt_files:
         print(f"No prompt files found in '{prompts_dir}'.")

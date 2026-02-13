@@ -64,3 +64,11 @@ The framework provides a **solid architectural foundation**. To move from "Proto
 1.  **Refine LGD Models**: Replace scalars with structural Workout LGD models.
 2.  **Backtesting Module**: Create a new module `src/backtesting.py` to run Kolmogorov-Smirnov (KS) and Binomial tests on the outputs.
 3.  **Governance**: formalized the definition of "Significant Increase in Credit Risk" (SICR) with specific quantitative thresholds in a config file.
+
+---
+
+## 5. Remediation Plan (Added by Validation Agent)
+Based on the `ifrs9-cecl-validation` workflow, the following immediate actions are scheduled:
+1.  **Correlation Engine**: Update `data_model.py` to use Cholesky decomposition for macro variable generation.
+2.  **Granular Calibration**: Update `pd_pit_model.py` to differentiate Asset Correlation ($\rho$) by segment (Mortgage/SME/Retail).
+3.  **Automated Testing**: Enhance `run_analysis.py` to include automatic Binomial Backtesting and PSI checks.

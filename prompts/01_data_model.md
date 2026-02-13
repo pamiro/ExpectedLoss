@@ -5,3 +5,4 @@
 - private individual mortgages 
 - SME loans
 Include simulated data for macro economic history and projections. 
+IMPORTANT: ensure correlation between macro variables (e.g. GDP and Unemployment) using Cholesky Decomposition or Vector Autoregression (VAR). 
